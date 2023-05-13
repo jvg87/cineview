@@ -1,0 +1,115 @@
+.movie-card{
+  margin: 1rem auto;
+  width: 320px;
+  height: 480px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #1B1B1E;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.movie-card .poster .img{
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.movie-card .poster{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.movie-card .poster::before{
+  content: '';
+  position: absolute;
+  bottom: -300px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0), 70%, transparent);
+  transition: .7s;
+  z-index: 1;
+}
+
+.movie-card:hover .poster::before{
+  bottom: 0;
+}
+
+.poster img{
+  width: 100%;
+  height: 100%;
+  transition: .8s;
+}
+
+.movie-card:hover .poster img{
+  filter: blur(8px);
+}
+
+.datails{
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  bottom: -410px;
+  left: 0;
+  transition: .8s;
+  z-index: 2;
+}
+
+.movie-card:hover .datails{
+  bottom: 0;
+}
+
+.datails h2{
+  text-align: center;
+  color: #FBFFFE;
+  font-size: 24px;
+  margin: 1.2rem 0;
+  font-weight: bold;
+}
+
+.datails a{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  text-decoration: none;
+  background-color: #f1c40f;
+  font-weight: 500;
+  color: #1B1B1E;
+  border-radius: .4rem;
+  transition: .5s ease;
+}
+
+.datails a:hover{
+  border: 1px solid #f1c40f;
+  background-color:#1B1B1E ;
+  color: #f1c40f;
+}
+
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating span{
+  position: relative;
+  color: #f1c40f;
+  font-weight: 600;
+  margin-left: .5rem;
+}
+
+.rating span:last-child{
+  color: #FBFFFE;
+}
+
+.info p{
+  font-size: 14px;
+  color: #FBFFFE;
+  margin: 15px 0 10px;
+}
+
