@@ -9,7 +9,7 @@ function Card({ id, poster_path, overview, title, vote_average}) {
       <div className="poster">
         <img src={`https://image.tmdb.org/t/p/original/${poster_path}`} alt={title} />
       </div>
-      <div className="details">
+      <div className="datails">
         <h2>{title}</h2>
         <div className="rating">
           <span><FaStar/></span>

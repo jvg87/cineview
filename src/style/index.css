@@ -4,11 +4,19 @@
   box-sizing: border-box;
 }
 
+:root{
+  --dark-color:#1B1B1E;
+  --light-color: #FBFFFE;
+  --primary-color:#f1c40f;
+  --secondary-color:#6D676E;
+  --terciary-color:#96031A;
+}
+
 html, body, #root{
   min-height: 100vh;
 }
 
 body{
   font-family: sans-serif;
-  background-color: #FBFFFE;
+  background-color: var(--secondary-color);
 }

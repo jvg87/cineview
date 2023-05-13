@@ -28,18 +28,18 @@ function Home() {
 
   }, [])
 
-  // if(loading){
-  //   return(
-  //       <div className='loading'>
-  //           <h1><BiLoader/></h1>
-  //           <h2>Carregando filmes...</h2>
-  //       </div>
-  //   )
-  // }
+  if(loading){
+    return(
+        <div className='loading'>
+            <h1></h1>
+            <h2>Carregando filmes...</h2>
+        </div>
+    )
+  }
 
   return ( 
     <div className='container'>
-      <h1>Filmes em Cartaz</h1>
+      <h1>Filmes em Cartaz:</h1>
       <div className="cards">
         {movies.map(movie => {
           return (
