@@ -1,6 +1,7 @@
 import{ useEffect, useState } from 'react';
 import api from '../../services/api';
 
+import Header from '../../components/Header';
 import Card from '../../components/Card';
 
 import './home.css';
@@ -21,7 +22,6 @@ function Home() {
 
       setMovies(response.data.results);
       setLoading(false);
-
     }
 
     getMovies();
@@ -37,8 +37,11 @@ function Home() {
     )
   }
 
+  console.log(movies);
+
   return ( 
     <div className='container'>
+      <Header/>
       <h1>Filmes em Cartaz:</h1>
       <div className="cards">
         {movies.map(movie => {
