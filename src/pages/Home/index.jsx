@@ -1,6 +1,11 @@
 import{ useEffect, useState } from 'react';
 import api from '../../services/api';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/bundle';
+
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 
@@ -8,6 +13,7 @@ import './home.css';
 
 function Home() {
   const [movies, setMovies] = useState([]);
+  const [headerMovie, setHeaderMovie] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +26,8 @@ function Home() {
       }
       })
 
-      setMovies(response.data.results);
+      setHeaderMovie(response.data.results.slice(0,4))
+      setMovies(response.data.results.slice(4,14));
       setLoading(false);
     }
 
@@ -36,12 +43,46 @@ function Home() {
         </div>
     )
   }
-
+  console.log(headerMovie);
   console.log(movies);
 
   return ( 
     <div className='container'>
-      <Header/>
+      <Swiper
+        // className='swiper'
+        modules={[Navigation, Pagination, A11y, Autoplay]}
+        slidesPerView={1}
+        navigation
+        loop={true}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true
+        }}
+        a11y
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+      >
+        {headerMovie.map(movie => {
+          return (
+            <SwiperSlide key={movie.id}>
+              <Header
+                id={movie.id}
+                backdrop_path={movie.backdrop_path}
+                title={movie.title}
+                release_date={movie.release_date}
+                runtime={movie.runtime}
+                vote_average={movie.vote_average}
+                overview={movie.overview}
+              />
+            </SwiperSlide>
+          )
+        })}
+      </Swiper>
+
+
+
       <h1>Filmes em Cartaz:</h1>
       <div className="cards">
         {movies.map(movie => {

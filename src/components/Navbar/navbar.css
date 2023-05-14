@@ -1,7 +1,4 @@
 nav{
-  position:sticky;
-  left: 0;
-  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,7 +7,6 @@ nav{
   padding: 0 4rem;
   background-color: var(--dark-color);
   /* box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.7); */
-  z-index: 1000;
 }
 
 /* .logo{

@@ -4,7 +4,8 @@
 .header-container{
   width: 100%;
   height: 90vh;
-  background-color: aliceblue;
+  background-size: cover;
+  background-position: center;
   display: flex;
 }
 
@@ -15,23 +16,23 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  /* background-color: yellow; */
+  color: var(--light-color);
 }
 
 .title{
-  max-width: 22rem;
-  /* background-color: red; */
+  max-width: 80%;
 }
 
 .title h2{
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: left;
   margin-bottom: 1rem;
 }
 
 .data{
+  width: 50%;
   display: flex;
-  gap: 2rem;
+  justify-content: space-around;
   margin-bottom: 1rem;
 }
 
@@ -40,32 +41,26 @@
   color: var(--primary-color);
 }
 
-.buttons-header{
-  max-width: 22rem;
-  display: flex;
-  gap: 1rem;
-  /* flex-direction: column; */
-}
-
-.buttons-header a, .buttons-header button{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.content-left a{
+  width: 50%;
   text-align: center;
   text-decoration: none;
-  width: 12rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-  padding: 7px 10px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px;
   border-radius: .4rem;
   cursor: pointer;
   transition: .5s ease;
 }
 
-
+.content-left a:hover{
+  border: 1px solid var(--primary-color);
+  background-color:var(--dark-color) ;
+  color: var(--primary-color);
+}
 
 .content-right{
   height: 100%;
@@ -74,10 +69,38 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: green;
 }
 
 .content-right p{
   text-align: right;
+  color: var(--light-color);
 }
 
+@media screen and (max-width: 950px) {
+  .content-left{
+    padding:2rem;
+  }
+
+  .title h2{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content-left{
+    width: 100%;
+  }
+
+  .data{
+    justify-content: center;
+  }
+
+  .content-left a{
+    justify-content: center;
+    width: 100%;
+  }
+
+  .title h2{
+    font-size: 2rem;
+  }
+}

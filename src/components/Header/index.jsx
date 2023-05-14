@@ -1,45 +1,38 @@
-
+import { Link } from 'react-router-dom';
 import { FaCalendarAlt, FaClock, FaStar } from 'react-icons/fa';
 
 import './header.css';
 
 
-function Header() {
+function Header({ id, backdrop_path, title, release_date, runtime, genres, vote_average, overview }) {
+
+  function releaseData(release){
+    const data = release
+    const year = data.substring(0, 4)
+    return year
+}
+
   return ( 
-    <div className="header-container">
+    <div className="header-container" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${backdrop_path})`}}>
       <div className="content-left">
         <div className='title'>
-          <h2>WONDER WOMAM</h2>
+          <h2>{title}</h2>
         </div>
         <div className="data">
-          <div className='genre'>
-            <span>Romance / Drama</span>
-          </div>
           <div className='date'>
-            <span><FaCalendarAlt/>2019</span>
+            <span><FaCalendarAlt/>{releaseData(release_date)}</span>
           </div>
-          <div className='time'>
-            <span><FaClock/>128 min</span>
-          </div>
-        </div>
-        <div className='data'>
           <div className='rating'>
-            <span><FaStar/>7.8 / 10</span>
-          </div>
-          <div className='pg'>
-            <span>PG-13</span>
+            <span><FaStar/> {vote_average.toFixed(1)} / 10</span>
           </div>
         </div>
-        <div className='buttons-header'>
-            <button>Salvar Filme</button>
-            <a href="#">Assista o Trailer</a>
-          </div>
+        <Link to={`/filme/${id}`}>Acessar</Link>
       </div>
-      <div className="content-right">
+      {/* <div className="content-right">
         <div className='overview'>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum repellendus illum odit pariatur, possimus ipsum saepe omnis minus eum corrupti.</p>
+          <p>{overview}</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
