@@ -48,6 +48,7 @@ function Home() {
 
   return ( 
     <div className='container'>
+
       <Swiper
         // className='swiper'
         modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -80,8 +81,6 @@ function Home() {
           )
         })}
       </Swiper>
-
-
 
       <h1>Filmes em Cartaz:</h1>
       <div className="cards">
