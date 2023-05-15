@@ -6,14 +6,7 @@ nav{
   height: 10vh;
   padding: 0 4rem;
   background-color: var(--dark-color);
-  /* box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.7); */
 }
-
-/* .logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .logo a{
   text-decoration: none;

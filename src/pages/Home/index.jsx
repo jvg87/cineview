@@ -50,7 +50,6 @@ function Home() {
     <div className='container'>
 
       <Swiper
-        // className='swiper'
         modules={[Navigation, Pagination, A11y, Autoplay]}
         slidesPerView={1}
         navigation

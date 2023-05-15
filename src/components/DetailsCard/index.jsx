@@ -1,5 +1,4 @@
 import { FaCalendarAlt, FaClock, FaStar, FaHeart, FaPlay } from 'react-icons/fa';
-import { toast } from 'react-toastify';
 
 import './detailsCard.css';
 
@@ -19,15 +18,15 @@ function DetailsCard({ filme, overview, backdrop_path, title, vote_average, rele
     const hasMovie = saveMovies.some(movieSave => movieSave.id === filme.id);
 
     if (hasMovie){
-      console.log('deu ruim');
-      toast.warn('Esse filme já está na sua lista!');
+      alert('Esse filme já está na sua lista!');
+      return;
     }
 
-    console.log('deu bom');
+    
 
     saveMovies.push(filme);
     localStorage.setItem('@movies',JSON.stringify(saveMovies));
-    toast.success('Filme salvo com sucesso');
+    alert('Filme salvo com sucesso');
   }
 
 

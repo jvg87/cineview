@@ -106,7 +106,7 @@
   width: 100%;
 }
 
-:is(.buttonsCard a, .buttonsCard button){
+.buttonsCard :is(a, button){
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -124,7 +124,7 @@
   transition: .5s ease;
 }
 
-:is(.buttonsCard button:hover, .buttonsCard a:hover){
+.buttonsCard :is(button:hover, a:hover){
   background-color: var(--primary-color);
   color: var(--dark-color);
 }

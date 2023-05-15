@@ -4,7 +4,7 @@ import { FaCalendarAlt, FaClock, FaStar } from 'react-icons/fa';
 import './header.css';
 
 
-function Header({ id, backdrop_path, title, release_date, runtime, genres, vote_average, overview }) {
+function Header({ id, backdrop_path, title, release_date, vote_average }) {
 
   function releaseData(release){
     const data = release
@@ -28,11 +28,6 @@ function Header({ id, backdrop_path, title, release_date, runtime, genres, vote_
         </div>
         <Link to={`/filme/${id}`}>Acessar</Link>
       </div>
-      {/* <div className="content-right">
-        <div className='overview'>
-          <p>{overview}</p>
-        </div>
-      </div> */}
     </div>
   );
 }
