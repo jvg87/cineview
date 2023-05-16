@@ -13,7 +13,7 @@ function Card({ id, poster_path, overview, title, vote_average}) {
         <h2>{title}</h2>
         <div className="rating">
           <span><FaStar/></span>
-          <span>{vote_average} / 10</span>
+          <span>{vote_average.toFixed(1)} / 10</span>
         </div>
         <div className="info">
           <p>{overview}</p>

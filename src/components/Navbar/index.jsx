@@ -13,13 +13,13 @@ function Navbar() {
       </div>
       <div className="nav-links">
         <Link to='/search'>
-          <span><FaSearch/></span>
+          <FaSearch/><span>Buscar Filme</span>
         </Link>
         <Link to='/fav'>
-          <span>Meus Filmes</span>
+          <FaHeart/><span>Meus Filmes</span>
         </Link>
         <Link to='/ranking'>
-          <span>Melhore Avaliados</span>
+          <FaStar/><span>Melhores Avaliados</span>
         </Link>
       </div>
     </nav>

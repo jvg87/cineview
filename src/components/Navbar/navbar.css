@@ -49,49 +49,31 @@ nav{
   transform: scale(1);
 }
 
-
-/* .buttons{
-  text-decoration: none;
-  width: 8rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 2px solid var(--primary-color);
-  background: transparent;
-  padding: .5rem 1rem;
-  color: var(--primary-color);
-  gap: .5rem;
-  border-radius: .4rem;
-  transition: .5s ease;
-} */
-
-/* .buttons:hover{
-  transform: scale(1.05);
-}
-
-.buttons svg{
+.nav-links svg{
   display: none;
 }
 
 @media screen and (max-width: 800px) {
-  nav span{
-    display: none;
+  nav{
+    padding: 0 2rem;
   }
 
-  .logo svg{
-    display: block;
-    font-size: 2rem;
-  }
-    
-  .buttons svg{
-    display: block;
-    font-size: 2rem;
+  .logo a{
+    font-size: 1.5rem;
   }
 
-  .buttons{
-    border: 0;
+  .nav-links{
+    gap: 2rem;
   }
-} */
+
+  .nav-links span{
+      display: none;
+  }
+
+  .nav-links svg{
+    display: block;
+    font-size: 1.1rem;
+  }
+
+}
 
