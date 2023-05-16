@@ -1,13 +1,35 @@
 footer{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   height: 6vh;
+  padding: 0 1rem;
+  border-top: 1px solid var(--secondary-color);
   background-color: var(--dark-color);
 }
 
-footer a{
+footer span{
+  color: var(--secondary-color);
+  font-size: .8rem;
+}
+
+.social-medias{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-medias a{
   text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.social-medias a svg{
+  font-size: 1.5rem;
+}
+
+.social-medias a:hover{
   color: var(--primary-color);
 }
